@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		*{ box-sizing: border-box; padding: 0px; margin: 0px; font-weight: bold;font-family: verdana; }
+		.head{ grid-area: head; border: 1px solid black;}
+		.nav{grid-area: nav; border: 1px solid black;}
+		.sec{grid-area: sec; border: 1px solid black;}
+		.side{grid-area: side; border: 1px solid black;}
+		.foot{grid-area: foot; border: 1px solid black;}
+
+		.head{ background-color: #aaa; height: 100px;}
+		.nav{background-color: #bbb; height: 480px;}
+		.sec{background-color: #ccc;}
+		.side{background-color: #ddd;}
+		.foot{background-color: #eee; height: 80px;}
+
+		.grid2-container{
+			display: grid;
+			text-align: center;
+			grid-template-areas: 'head head head head head head'
+								 'nav sec sec sec sec side'
+								 'foot foot foot foot foot foot'
+		}
+		@media (max-width:600px){
+			.grid2-container{
+				grid-template-areas: 'head head head head head head'
+									'nav nav nav nav nav nav'
+									 'sec sec sec sec sec sec'
+									 'side side side side side side'
+									 'foot foot foot foot foot foot'
+								}
+			.nav{height: 120px;}
+			.sec{height: 350px;}
+			.side{height: 100px;}
+
+		}
+	</style>
+	<title>Grid View 2</title>
+</head>
+<body>
+	<div class="grid2-container">
+		<header class="head">
+			Header
+		</header>
+		<nav class="nav">
+			Navigation
+		</nav>
+		<section class="sec">
+			Section
+		</section>
+		<aside class="side">
+			Sidebar
+		</aside>
+		<footer class="foot">
+			Footer
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+*{
+	box-sizing: border-box; padding: 0px; margin: 0px; font-family: verdana; 
+	font-weight: bold;
+}
+
+.header{ grid-area: header; }
+.navbar{ grid-area: navbar; }
+.sidebar{ grid-area: sidebar; }
+.post1{ grid-area: post1; }
+.post2{ grid-area: post2; }
+.post3{ grid-area: post3; }
+.footer{ grid-area: footer; }
+
+.header{
+	background-color: #aaa;
+	height: 100px;
+	text-align: center;
+	border: 1px solid black;
+}
+.navbar{
+	background-color: #ddd;
+	height: 60px;
+	border: 1px solid black;
+	display: grid;
+	align-content: center;
+}
+.navul{
+	display: flex;
+	justify-content:space-around;
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+.sidebar{
+	background-color: #bbb;
+	text-align: center;
+	border: 1px solid black;
+}
+.post1{
+	background-color: #ccc;
+	height: 200px;
+	text-align: center;
+	border: 1px solid black;
+
+}
+.post2{
+	background-color: #ccc;
+	height: 200px;
+	text-align: center;
+	border: 1px solid black;
+}
+.post3{
+	background-color: #ccc;
+	height: 200px;
+	text-align: center;
+	border: 1px solid black;
+}
+.footer{
+	background-color: #aaa;
+	height: 160px;
+	text-align: center;
+	border: 1px solid black;
+}
+.gridcontainer{
+	display: grid;
+	grid-template-areas: 'header header header header header header'
+						'navbar navbar navbar navbar navbar navbar'
+						'sidebar sidebar post1 post1 post1 post1'
+						'sidebar sidebar post2 post2 post2 post2'
+						'sidebar sidebar post3 post3 post3 post3'
+						'footer footer footer footer footer footer'
+
+}
+@media (max-width:600px){
+	.gridcontainer{
+		grid-template-areas: 'header header header header header header'
+							 'navbar navbar navbar navbar navbar navbar'
+							 'post1 post1 post1 post1 post1 post1'
+							 'post2 post2 post2 post2 post2 post2'
+							 'post3 post3 post3 post3 post3 post3'
+							 'sidebar sidebar sidebar sidebar sidebar sidebar'
+							 'footer footer footer footer footer footer'
+	}
+	.sidebar{
+		min-height: 160px;
+	}
+
+}
+
+
+/*#ul{
+		display: flex; justify-content: space-around; align-items: center;
+		list-style: none;
+		font-size: 24px;
+		background-color: black;
+		height:  45px;
+}
+.alist{
+
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+
+}*/
+
+
+
+
+
+
+
+
+
+

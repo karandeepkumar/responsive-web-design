@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		*{
+			box-sizing: border-box; padding: 0px; margin: 0px; text-align: center;
+		}
+		.navbar{grid-area: navbar;}
+		.sec1{grid-area: sec1;}
+		.sec2{grid-area: sec2;}
+		.sec3{grid-area: sec3;}
+		.footer{ grid-area: footer; }
+
+		.grid-container{
+			display: grid;
+			grid-template-areas: 'navbar navbar navbar navbar navbar navbar'
+								 'sec1 sec1 sec2 sec2 sec3 sec3'
+								 'footer footer footer footer footer footer'
+		}
+		.navbar{
+			display: grid;
+			align-content: center;
+			background-color: #aaa;
+			border: 1px solid black;
+			height: 70px;
+		}
+		.navul{
+				display: flex;
+				justify-content:space-around;
+				list-style: none;
+				font-weight: bold;
+				font-family: verdana;
+				}
+		a{
+			text-decoration: none;
+			color: black;
+
+		}
+	
+		.sec1{
+			background-color: #bbb;
+			border: 1px solid black;
+			height: 450px;
+		}
+		.sec2{
+			background-color: #bbb;
+			border: 1px solid black;
+		}
+		.sec3{
+			background-color: #bbb;
+			border: 1px solid black;
+		}
+		.footer{
+			background-color: #ccc;
+			border: 1px solid black;
+			min-height: 150px;
+		}
+		@media (max-width:600px){
+			.grid-container{
+				grid-template-areas: 'navbar navbar navbar navbar navbar navbar'
+									 'sec1 sec1 sec1 sec1 sec1 sec1'
+									 'sec2 sec2 sec2 sec2 sec2 sec2'
+									 'sec3 sec3 sec3 sec3 sec3 sec3'
+									 'footer footer footer footer footer footer'
+
+			}
+			.sec1,.sec2,.sec3{
+				min-height: 400px;
+			}
+		}
+	</style>
+
+	<title>Gridview 2</title>
+</head>
+<body>
+	<div class="grid-container">
+		<nav class="navbar">
+			<ul class="navul">
+				<li><a href="gridview.html">Home</a></li>
+				<li><a href="#">Tech</a></li>
+				<li><a href="#">Sports</a></li>	
+			</ul>
+		</nav>
+		<section class="sec1">
+			<h3>Section 1</h3>
+		</section>
+		<section class="sec2">
+			<h3>Section 2</h3>
+		</section>
+		<section class="sec3">
+			<h3>Section 3</h3>
+		</section>
+		<footer class="footer">
+			<h3>Footer</h3>
+		</footer>
+	</div>
+</body>
+</html>
